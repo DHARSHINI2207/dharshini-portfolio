@@ -76,3 +76,278 @@ body.cc a:hover~#cur,body.cc button:hover~#cur{transform-origin:center}
 .project-kicker{display:block;font-size:10px!important;letter-spacing:.16em;text-transform:uppercase;color:var(--section-acc)!important;margin-bottom:2px}
 @media(max-width:980px){}
 @media(max-width:620px){.about-note{grid-template-columns:1fr;gap:8px}.pv{min-height:270px}}
+/* =========================================================
+   FINAL TYPOGRAPHY + COLOR POLISH
+   ========================================================= */
+
+/* Base readability */
+body {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #f5f7ff;
+}
+
+/* Section headings */
+.h2 {
+  font-size: clamp(2.5rem, 6vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+/* Main hero headline */
+.hero-line {
+  font-size: clamp(2.35rem, 5.4vw, 5.5rem);
+  line-height: 0.97;
+}
+
+/* Supporting paragraphs */
+.lead {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.75;
+  color: #b8bdca;
+}
+
+/* Eyebrows / section labels */
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+}
+
+/* Buttons */
+.btn {
+  font-size: 15px;
+  padding: 15px 28px;
+}
+
+/* Cards */
+.card h3 {
+  font-size: 1.45rem;
+}
+
+.card li {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Moving technology strip */
+.mq {
+  font-size: clamp(1.05rem, 2.5vw, 1.7rem);
+  color: #aeb4c3;
+}
+
+/* Project text */
+.pi {
+  padding: 38px;
+}
+
+.pi small {
+  font-size: 13px;
+}
+
+.pv-copy small {
+  font-size: 11px;
+}
+
+.pv-copy span {
+  font-size: 12px;
+}
+
+/* About */
+.about-note p {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* Contact */
+.contact-intro h3 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.contact-intro p {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.contact-action {
+  font-size: 16px;
+}
+
+.contact-action small {
+  font-size: 13px;
+}
+
+.contact-note {
+  font-size: 13px;
+}
+
+/* Form readability */
+.f label {
+  font-size: 13px;
+}
+
+.f input,
+.f select,
+.f textarea {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 15px 17px;
+}
+
+/* Chat / guide */
+.msgs {
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.sg button {
+  font-size: 13px;
+}
+
+/* Terminal */
+.term {
+  font-size: 14px;
+}
+
+.term pre {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   RICHER INTERIOR COLORS
+   ========================================================= */
+
+#about {
+  --section-acc: #67d5ff;
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(56, 189, 248, 0.13),
+      transparent 34%
+    );
+}
+
+#brain {
+  --section-acc: #b59aff;
+  background:
+    radial-gradient(
+      circle at 18% 35%,
+      rgba(139, 92, 246, 0.14),
+      transparent 32%
+    );
+}
+
+#skills {
+  --section-acc: #55ead4;
+  background:
+    radial-gradient(
+      circle at 78% 40%,
+      rgba(20, 184, 166, 0.12),
+      transparent 32%
+    );
+}
+
+#work {
+  --section-acc: #c8b5ff;
+  background:
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(167, 139, 250, 0.12),
+      transparent 30%
+    );
+}
+
+#journey {
+  --section-acc: #62e6f8;
+  background:
+    radial-gradient(
+      circle at 84% 25%,
+      rgba(34, 211, 238, 0.12),
+      transparent 30%
+    );
+}
+
+#services {
+  --section-acc: #ee9cf7;
+  background:
+    radial-gradient(
+      circle at 18% 55%,
+      rgba(217, 70, 239, 0.12),
+      transparent 30%
+    );
+}
+
+#contact {
+  --section-acc: #82bfff;
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(59, 130, 246, 0.13),
+      transparent 32%
+    );
+}
+
+/* Accent-colored headings / interactive details */
+#about .h2,
+#brain .h2,
+#skills .h2,
+#work .h2,
+#journey .h2,
+#services .h2,
+#contact .h2 {
+  text-shadow: 0 0 35px color-mix(
+    in srgb,
+    var(--section-acc) 12%,
+    transparent
+  );
+}
+
+/* Glass panels become slightly richer */
+.glass {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Better hover accent */
+.card:hover,
+.about-note:hover {
+  box-shadow:
+    0 18px 60px rgba(0, 0, 0, 0.25),
+    0 0 35px color-mix(
+      in srgb,
+      var(--section-acc, var(--acc)) 9%,
+      transparent
+    );
+}
+
+/* Mobile readability */
+@media (max-width: 620px) {
+  body {
+    font-size: 16px;
+  }
+
+  .h2 {
+    font-size: clamp(2.25rem, 12vw, 3.6rem);
+  }
+
+  .hero-line {
+    font-size: clamp(2.25rem, 12vw, 4rem);
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .pi {
+    padding: 28px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+}
